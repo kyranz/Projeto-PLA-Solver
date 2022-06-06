@@ -36,10 +36,10 @@ function resolve(conta) {
 
         },
         "variables": {
-            "x1": { "profit": conta.profit_ipanema, "x1": 1, "wood": 0.355, "hours": conta.hours_ipanema },
-            "x2": { "profit": conta.profit_ubatuba, "x2": 1, "wood": 0.250, "hours": conta.hours_ubatuba },
-            "x3": { "profit": conta.profit_ilha, "x3": 1, "wood": 0.2, "hours": conta.hours_ilha },
-            "x4": { "profit": conta.profit_trindade, "x4": 1, "wood": 0.2, "hours": conta.hours_trindade }
+            "x1": { "profit": conta.profit_cadeira, "x1": 1, "wood": conta.cost_cadeira, "hours": conta.hours_cadeira },
+            "x2": { "profit": conta.profit_mesa, "x2": 1, "wood": conta.cost_mesa, "hours": conta.hours_mesa },
+            "x3": { "profit": conta.profit_armario, "x3": 1, "wood": conta.cost_armario, "hours": conta.hours_armario },
+            "x4": { "profit": conta.profit_cama, "x4": 1, "wood": conta.cost_cama, "hours": conta.hours_cama }
 
         },
         "ints": { "x1": 1, "x2": 1, "x3": 1, "x4": 1 }
@@ -72,8 +72,8 @@ function filtred(awnser) {
 }
 
 function addTotal(answer, conta) {
-    answer.total_hours = conta.hours_ipanema * answer.x1 + conta.hours_ubatuba * answer.x2 + conta.hours_ilha * answer.x3 + conta.hours_trindade * answer.x4
+    answer.total_hours = conta.hours_cadeira * answer.x1 + conta.hours_mesa * answer.x2 + conta.hours_armario * answer.x3 + conta.hours_cama * answer.x4
     answer.total_hours = answer.total_hours.toFixed(2)
-    answer.total_wood = (0.355 * answer.x1 + 0.250 * answer.x2 + 0.2 * answer.x3 + 0.2 * answer.x4).toFixed(2)
+    answer.total_wood = (conta.cost_cadeira * answer.x1 + conta.cost_mesa * answer.x2 + conta.cost_armario * answer.x3 + conta.cost_cama * answer.x4).toFixed(2)
     return answer
 }

@@ -4,48 +4,68 @@
             <div class="row">
                 <h3>Lucros por unidade</h3>
                 <div class="form-group col-md-3">
-                    <label for="ipanema1">Ipanema</label>
-                    <input type="number" class="form-control" id="ipanema1" min="0" formControlName="profit_ipanema">
+                    <label for="cadeira1">Cadeira</label>
+                    <input type="number" class="form-control" id="cadeira1" min="0" formControlName="profit_cadeira">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="ubatuba1">Ubatuba</label>
-                    <input type="number" class="form-control" id="ubatuba1" min="0" formControlName="profit_ubatuba">
+                    <label for="mesa1">Mesa</label>
+                    <input type="number" class="form-control" id="mesa1" min="0" formControlName="profit_mesa">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="ilhabela1">Ilha bela</label>
-                    <input type="number" class="form-control" id="ilhabela1" min="0" formControlName="profit_ilha">
+                    <label for="armario1">Armário</label>
+                    <input type="number" class="form-control" id="armario1" min="0" formControlName="profit_armario">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="trindade1">Trindade</label>
-                    <input type="number" class="form-control" id="trindade1" min="0" formControlName="profit_trindade">
+                    <label for="cama1">Cama</label>
+                    <input type="number" class="form-control" id="cama1" min="0" formControlName="profit_cama">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <h3>Custo de madeira por unidade (Kg)</h3>
+                <div class="form-group col-md-3">
+                    <label for="cadeira2">Cadeira</label>
+                    <input type="number" class="form-control" id="cadeira2" min="0" formControlName="cost_cadeira">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="mesa2">Mesa</label>
+                    <input type="number" class="form-control" id="mesa2" min="0" formControlName="cost_mesa">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="armario2">Armário</label>
+                    <input type="number" class="form-control" id="armario2" min="0" formControlName="cost_armario">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="cama2">Cama</label>
+                    <input type="number" class="form-control" id="cama2" min="0" formControlName="cost_cama">
                 </div>
             </div>
     
             <div class="row mt-5">
                 <h3>Horas necessárias para produção</h3>
                 <div class="form-group col-md-3">
-                    <label for="ipanema3">Ipanema</label>
-                    <input type="number" class="form-control" id="ipanema3" min="0" formControlName="hours_ipanema">
+                    <label for="cadeira3">Cadeira</label>
+                    <input type="number" class="form-control" id="cadeira3" min="0" formControlName="hours_cadeira">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="ubatuba3">Ubatuba</label>
-                    <input type="number" class="form-control" id="ubatuba3" min="0" formControlName="hours_ubatuba">
+                    <label for="mesa3">Mesa</label>
+                    <input type="number" class="form-control" id="mesa3" min="0" formControlName="hours_mesa">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="ilhabela3">Ilha bela</label>
-                    <input type="number" class="form-control" id="ilhabela3" min="0" formControlName="hours_ilha">
+                    <label for="armario3">Armário</label>
+                    <input type="number" class="form-control" id="armario3" min="0" formControlName="hours_armario">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="trindade3">Trindade</label>
-                    <input type="number" class="form-control" id="trindade3" min="0" formControlName="hours_trindade">
+                    <label for="cama3">Cama</label>
+                    <input type="number" class="form-control" id="cama3" min="0" formControlName="hours_cama">
                 </div>
             </div>
     
             <div class="row mt-3">
                 <div class="col-lg-6">
-                    <label for="ipanema3">Madeira Disponivel no estoque (kg) </label>
+                    <label for="cadeira3">Madeira Disponivel no estoque (Kg) </label>
                     <div class="form-group col-md-5">
-                        <input type="number" class="form-control" id="ipanema3" min="0" formControlName="total_wood">
+                        <input type="number" class="form-control" id="cadeira3" min="0" formControlName="total_wood">
                     </div>
                     
                 </div>
@@ -61,14 +81,14 @@
         </form>
         <div class="col-lg-6 mt-5 text-center" *ngIf="showResposta">
             <h3>💰Lucro máximo: R$ {{resposta.result}}</h3>
-            <p class="text-justify">Esse lucro será atingido produzindo óculos da produzindo as quantidades</p>
+            <p class="text-justify">Esse lucro será atingido produzindo móveis com as seguintes quantidades</p>
             <table class="table text-center">
                 <thead class="table-dark">
                     <tr>
-                        <td> madeira Ipanema</td>
-                        <td> madeira Ubatuba</td>
-                        <td> madeira Ilha bela</td>
-                        <td> madeira Trindade</td>
+                        <td>Cadeira</td>
+                        <td>Mesa</td>
+                        <td>Armário</td>
+                        <td>Cama</td>
                         
                     </tr>
                 </thead>
